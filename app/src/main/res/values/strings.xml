@@ -14,7 +14,10 @@
     <string name="popup_message">bla bla ...</string>
     <string name="dtmm1">DTMM1</string>
     <string name="evet">EVET</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
     <string name="hayir">HAYIR</string>
+
     <string name="ilgisiz">İLGİSİZ</string>
     <string name="ilerle">İLERLE</string>
     <string name="dtmm2">DTMM2</string>

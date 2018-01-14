@@ -19,7 +19,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity">
+
         </activity>
+        <activity android:name=".Kayit" />
+        <activity android:name=".Menu" />
+        <activity android:name=".DTMM1" />
+        <activity android:name=".BizKimiz" />
+        <activity android:name=".DTMM" />
+        <activity android:name=".Profil" />
+        <activity android:name=".Oneri" />
+        <activity android:name=".DTMM2" />
+        <activity android:name=".DTMM3" />
+        <activity android:name=".DTMM4" />
+        <activity android:name=".DTMM5" />
+        <activity android:name=".DTMM6" />
+        <activity android:name=".DTMM7" />
+        <activity android:name=".DTMM8" />
+        <activity android:name=".DTMM9" />
+        <activity android:name=".Asama2" />
+        <activity android:name=".Sonuc"></activity>
     </application>
 
 </manifest>

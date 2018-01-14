@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void girisClicked(View w){
-        Intent goToMenu = new Intent(this, com.example.mizmer.Menu.class);
+        Intent goToMenu = new Intent(this,Menu.class);
         startActivity(goToMenu);
     }
     public void kayıt(View v) {
