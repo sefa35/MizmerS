@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mizmer.DTMM7">
+
+    <TextView
+        android:id="@+id/textDtmm7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="243dp"
+        android:text="@string/dtmm7" />
+
+    <Button
+        android:id="@+id/evetBttn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="142dp"
+        android:layout_marginStart="32dp"
+        android:onClick="evet7Clicked"
+        android:text="@string/evet" />
+
+    <Button
+        android:id="@+id/hayirBttn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/evetBttn7"
+        android:layout_centerHorizontal="true"
+        android:onClick="hayir7Clicked"
+        android:text="@string/hayir" />
+
+    <Button
+        android:id="@+id/ilgisizBttn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/hayirBttn7"
+        android:layout_marginEnd="34dp"
+        android:onClick="ilgisiz7Clicked"
+        android:text="@string/ilgisiz" />
+
+    <Button
+        android:id="@+id/ilerleBttn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:layout_toEndOf="@+id/hayirBttn7"
+        android:onClick="ilerle7Clicked"
+        android:text="@string/ilerle" />
+
+
+</RelativeLayout>

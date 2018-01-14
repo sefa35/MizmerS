@@ -1,18 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mizmer2.MainActivity">
+    tools:context="com.example.mizmer.MainActivity">
 
-    <TextView
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/logo" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/kullanıcı_adı_text"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="#11000000"
+        android:drawableStart="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint="@string/kullan_c_ad_mail"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/sifre_text"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/kullanıcı_adı_text"
+        android:layout_below="@+id/kullanıcı_adı_text"
+        android:layout_marginTop="18dp"
+        android:background="#11000000"
+        android:drawableStart="@drawable/ic_action_pass"
+        android:ems="10"
+        android:hint="@string/sifre"
+        android:inputType="textPassword"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/girisBttn"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/sifre_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="girisClicked"
+        android:text="@string/giris" />
+
+    <Button
+        android:id="@+id/kayıtBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/girisBttn"
+        android:layout_below="@+id/girisBttn"
+        android:layout_marginTop="49dp"
+        android:background="@color/greenYellow"
+        android:onClick="kayıt"
+        android:text="@string/kayıt_olustur" />
+
+</RelativeLayout>

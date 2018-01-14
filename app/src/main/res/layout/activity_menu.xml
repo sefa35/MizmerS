@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mizmer.Menu">
+
+    <Button
+        android:id="@+id/bizKimizBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dtmmBttn"
+        android:layout_alignBottom="@+id/dtmmBttn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:onClick="bizKimizClicked"
+        android:text="Biz Kimiz?"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <Button
+        android:id="@+id/dtmmBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/profilBttn"
+        android:layout_alignBottom="@+id/profilBttn"
+        android:layout_toEndOf="@+id/bizKimizBttn"
+        android:onClick="dtmmClicked"
+        android:text="DTMM"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <Button
+        android:id="@+id/profilBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/öneriBttn"
+        android:layout_alignBottom="@+id/öneriBttn"
+        android:layout_toEndOf="@+id/dtmmBttn"
+        android:onClick="profilClicked"
+        android:text="Profil"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <Button
+        android:id="@+id/öneriBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:layout_toEndOf="@+id/profilBttn"
+        android:onClick="öneriClicked"
+        android:text="Öneri"
+        tools:layout_editor_absoluteX="292dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dtmmBttn"
+        android:layout_below="@+id/bizKimizBttn"
+        android:layout_marginTop="58dp"
+        android:text="...'e Hoşgeldiniz"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <Button
+        android:id="@+id/testBttn"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_alignStart="@+id/bizKimizBttn"
+        android:layout_below="@+id/textMenu"
+        android:layout_marginTop="52dp"
+        android:onClick="testBttnClicked"
+        android:text="Çocuğunuzun mizacını belirlemek için hemen teste başlayın" />
+
+</RelativeLayout>

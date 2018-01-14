@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mizmer.Kayit">
+
+
+    <EditText
+        android:id="@+id/kayit_id_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:ems="10"
+        android:hint="@string/adi_soyadi"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/kayit_mail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/kayit_id_text"
+        android:layout_below="@+id/kayit_id_text"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/mail"
+        android:inputType="textPersonName"
+         />
+
+    <EditText
+        android:id="@+id/kayit_sifre_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/kayit_mail_text"
+        android:layout_below="@+id/kayit_mail_text"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/sifre"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/kayit_sifre2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/kayit_sifre_text"
+        android:layout_below="@+id/kayit_sifre_text"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="@string/sifre_tekrar"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/kayitOlusturBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kayit_sifre2_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="@string/olustur" />
+
+</RelativeLayout>
