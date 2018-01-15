@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mizmer.DTMM6">
+    tools:context="com.example.mizmer2.DTMM6">
 
     <TextView
         android:id="@+id/textDtmm6"
