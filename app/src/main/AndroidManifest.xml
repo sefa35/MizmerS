@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.mizmer2">
+    package="com.example.mizmer2">
 
     <application
         android:allowBackup="true"
@@ -19,12 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity">
-            
-        </activity>
-        <activity android:name=".SignUpActivity">
-
-        </activity>
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".Kayit" />
         <activity android:name=".Menu" />
         <activity android:name=".DTMM1" />
@@ -41,7 +37,10 @@
         <activity android:name=".DTMM8" />
         <activity android:name=".DTMM9" />
         <activity android:name=".Asama2" />
-        <activity android:name=".Sonuc"></activity>
+        <activity android:name=".Sonuc" />
+        <activity
+            android:name=".NavigationDrawerMenu"
+            android:label="@string/title_activity_navigation_drawer_menu"></activity>
     </application>
 
 </manifest>

@@ -1,10 +1,18 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.mizmer.MainActivity">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:id="@+id/Bottombaritemone"
+       android:title="People">
+   </item>
+    <item android:id="@+id/Bottombaritemtwo"
+        android:title="Cards">
+    </item>
+    <item android:id="@+id/Bottombaritemthree"
+        android:title="Phones">
+    </item>
+    <item android:id="@+id/Bottombaritemfour"
+        android:title="Mails">
+    </item>
+    <item android:id="@+id/Bottombaritemfive"
+        android:title="Favorites">
+    </item>
+
 </menu>

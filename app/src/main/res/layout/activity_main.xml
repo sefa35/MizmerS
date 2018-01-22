@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mizmer2.MainActivity">
@@ -63,7 +64,7 @@
         android:layout_alignEnd="@+id/girisBttn"
         android:layout_below="@+id/girisBttn"
         android:layout_marginTop="49dp"
-        android:background="@color/greenYellow"
+        android:background="@drawable/rounded_button2"
         android:onClick="kayıt"
         android:text="@string/kayıt_olustur" />
 
