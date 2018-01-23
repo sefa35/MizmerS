@@ -24,6 +24,7 @@ public class  MainActivity extends AppCompatActivity {
     }
 
     public void girisClicked(View w){
+
         Intent goToMenu = new Intent(this,NavigationDrawerMenu.class);
         startActivity(goToMenu);
 

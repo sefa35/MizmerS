@@ -14,13 +14,14 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Dtmm2Fragment extends Fragment {
+public class Dtmm5Fragment extends Fragment {
 
     Button button;
     TextView textView;
     SeekBar seekBar;
 
-    public Dtmm2Fragment() {
+
+    public Dtmm5Fragment() {
         // Required empty public constructor
     }
 
@@ -28,10 +29,10 @@ public class Dtmm2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_dtmm2, container, false);
-        textView = (TextView)v.findViewById(R.id.text_dtmm2);
-        button = (Button)v.findViewById(R.id.ilerleBtn2);
-        seekBar = (SeekBar)v.findViewById(R.id.seekBar2);
+        View v = inflater.inflate(R.layout.fragment_dtmm5, container, false);
+        textView = (TextView)v.findViewById(R.id.text_dtmm5);
+        button = (Button)v.findViewById(R.id.ilerleBtn5);
+        seekBar = (SeekBar)v.findViewById(R.id.seekBar5);
         button.setOnClickListener(null);
 
         initSeekBar();
@@ -56,8 +57,8 @@ public class Dtmm2Fragment extends Fragment {
                         myListener.sendValToList(val);
 
 
-                        Dtmm3Fragment dtmm3Fragment = new Dtmm3Fragment();
-                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm3Fragment, dtmm3Fragment .getTag()).commit();
+                        Dtmm6Fragment dtmm6Fragment = new Dtmm6Fragment();
+                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm6Fragment, dtmm6Fragment .getTag()).commit();
                     }
                 });
 
