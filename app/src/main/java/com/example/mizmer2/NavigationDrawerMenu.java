@@ -46,6 +46,7 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
                 case R.id.navigation_dtmm:
                     //mTextMessage.setText(R.string.title_dtmm);
 
+
                     DtmmFragment dtmmFragment = new DtmmFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmmFragment, dtmmFragment.getTag()).commit();
 

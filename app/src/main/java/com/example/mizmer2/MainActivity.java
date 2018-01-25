@@ -8,8 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.app.*;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class  MainActivity extends AppCompatActivity {
+
+    DataBaseHelper helper = new DataBaseHelper(this);
 
     Button kayıtButton, girisButton;
 
@@ -25,8 +29,22 @@ public class  MainActivity extends AppCompatActivity {
 
     public void girisClicked(View w){
 
-        Intent goToMenu = new Intent(this,NavigationDrawerMenu.class);
-        startActivity(goToMenu);
+        EditText a = (EditText)findViewById(R.id.kullanıcı_adı_text);
+        String username = a.getText().toString();
+        EditText b = (EditText)findViewById(R.id.sifre_text);
+        String pass = b.getText().toString();
+
+        String password = helper.searchPass(username);
+        if (pass.equals(password)){
+            Intent goToMenu = new Intent(this,NavigationDrawerMenu.class);
+            startActivity(goToMenu);
+        }
+        else {
+            Toast temp = Toast.makeText(MainActivity.this, "Username and password don't match!", Toast.LENGTH_SHORT);
+            temp.show();
+        }
+
+
 
     }
     public void kayıt(View v) {
