@@ -38,6 +38,7 @@
         <activity android:name=".DTMM9" />
         <activity android:name=".Asama2" />
         <activity android:name=".Sonuc" />
+        <activity android:name=".SlideActivity"/>
         <activity
             android:name=".NavigationDrawerMenu"
             android:label="@string/title_activity_navigation_drawer_menu"></activity>

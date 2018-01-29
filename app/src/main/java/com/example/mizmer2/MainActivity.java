@@ -36,8 +36,10 @@ public class  MainActivity extends AppCompatActivity {
 
         String password = helper.searchPass(username);
         if (pass.equals(password)){
-            Intent goToMenu = new Intent(this,NavigationDrawerMenu.class);
-            startActivity(goToMenu);
+            Intent goToSlider = new Intent(this, SlideActivity.class);
+            startActivity(goToSlider);
+            //Intent goToMenu = new Intent(this,NavigationDrawerMenu.class);
+            //startActivity(goToMenu);
         }
         else {
             Toast temp = Toast.makeText(MainActivity.this, "Username and password don't match!", Toast.LENGTH_SHORT);
