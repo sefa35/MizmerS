@@ -56,8 +56,8 @@ public class Dtmm2Fragment extends Fragment {
                         myListener.sendValToList(val);
 
 
-                        Dtmm3Fragment dtmm3Fragment = new Dtmm3Fragment();
-                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm3Fragment, dtmm3Fragment .getTag()).commit();
+                        Dtmm9Fragment dtmm9Fragment = new Dtmm9Fragment();
+                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm9Fragment, dtmm9Fragment .getTag()).commit();
                     }
                 });
 

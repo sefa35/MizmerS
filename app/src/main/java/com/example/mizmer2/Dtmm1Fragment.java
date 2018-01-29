@@ -23,6 +23,8 @@ public class Dtmm1Fragment extends Fragment {
     TextView textView;
     SeekBar seekBar;
 
+    public static int counter = 1;
+
 
     public Dtmm1Fragment() {
         // Required empty public constructor
@@ -39,7 +41,9 @@ public class Dtmm1Fragment extends Fragment {
         seekBar = (SeekBar)v.findViewById(R.id.seekBar1);
         button.setOnClickListener(null);
 
-        initSeekBar();
+            initSeekBar();
+
+
 
 
         return v;
@@ -48,23 +52,40 @@ public class Dtmm1Fragment extends Fragment {
     private void initSeekBar() {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int value, boolean fromUser) {
+            public void onProgressChanged(final SeekBar seekBar, final int value, boolean fromUser) {
                 textView.setText("Normal SeekBar- Value: " + value);
 
                 final int val = value;
 
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                        MyListener myListener = (MyListener) getActivity();
-                        myListener.sendValToList(val);
 
 
-                        Dtmm2Fragment dtmm2Fragment = new Dtmm2Fragment();
-                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm2Fragment, dtmm2Fragment.getTag()).commit();
-                    }
-                });
+
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                           // if (counter < 9) {
+                                MyListener myListener = (MyListener) getActivity();
+                                myListener.sendValToList(val);
+
+
+                                counter++;
+                                textView.setText("reset");
+
+                                seekBar.setProgress(0);
+
+                                //Dtmm2Fragment dtmm2Fragment = new Dtmm2Fragment();
+                                //getFragmentManager().beginTransaction().replace(R.id.contentExamLayout, dtmm2Fragment, dtmm2Fragment.getTag()).commit();
+
+//                            }
+//                            else {
+//                                Dtmm2Fragment dtmm2Fragment = new Dtmm2Fragment();
+//                                getFragmentManager().beginTransaction().replace(R.id.contentExamLayout, dtmm2Fragment, dtmm2Fragment.getTag()).commit();
+//
+//                            }
+                        }
+                    });
+
+
 
             }
 
