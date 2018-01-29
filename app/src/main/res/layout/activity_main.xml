@@ -5,30 +5,32 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginbc"
     tools:context="com.example.mizmer2.MainActivity">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/sifre_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
+        android:layout_marginBottom="58dp"
         android:contentDescription="@string/todo"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logom" />
 
     <EditText
         android:id="@+id/kullanıcı_adı_text"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/imageView"
+        android:layout_above="@+id/sifre_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginBottom="11dp"
         android:background="#11000000"
         android:drawableStart="@drawable/ic_action_user"
         android:ems="10"
         android:hint="@string/kullan_c_ad_mail"
+        android:textColorHint="#363636"
         android:inputType="textPersonName"
         android:textSize="16sp" />
 
@@ -36,13 +38,14 @@
         android:id="@+id/sifre_text"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:layout_alignBottom="@+id/girisBttn"
         android:layout_alignStart="@+id/kullanıcı_adı_text"
-        android:layout_below="@+id/kullanıcı_adı_text"
-        android:layout_marginTop="18dp"
+        android:layout_marginBottom="75dp"
         android:background="#11000000"
         android:drawableStart="@drawable/ic_action_pass"
         android:ems="10"
         android:hint="@string/sifre"
+        android:textColorHint="#363636"
         android:inputType="textPassword"
         android:textSize="16sp" />
 
@@ -50,9 +53,9 @@
         android:id="@+id/girisBttn"
         android:layout_width="250dp"
         android:layout_height="55dp"
-        android:layout_below="@+id/sifre_text"
+        android:layout_above="@+id/kayıtBttn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/rounded_button"
         android:onClick="girisClicked"
         android:text="@string/giris" />
@@ -60,12 +63,14 @@
     <Button
         android:id="@+id/kayıtBttn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/girisBttn"
-        android:layout_below="@+id/girisBttn"
-        android:layout_marginTop="49dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/rounded_button2"
         android:onClick="kayıt"
-        android:text="@string/kayıt_olustur" />
+        android:text="@string/kayıt_olustur"
+        android:textColor="@color/colorAccent"
+        android:textSize="10dp" />
 
 </RelativeLayout>

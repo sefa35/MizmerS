@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/kayitbc"
     tools:context="com.example.mizmer2.Kayit">
 
 
@@ -17,7 +18,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="101dp"
         android:ems="10"
+        android:textColorHint="#9c9c9c"
         android:hint="Kullanıcı adı"
+        android:textColor="#ffff"
         android:inputType="textPersonName" />
 
     <EditText
@@ -29,6 +32,8 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="@string/mail"
+        android:textColorHint="#9c9c9c"
+        android:textColor="#ffff"
         android:inputType="textPersonName"
          />
 
@@ -40,7 +45,9 @@
         android:layout_below="@+id/kayit_mail_text"
         android:layout_marginTop="24dp"
         android:ems="10"
+        android:textColorHint="#9c9c9c"
         android:hint="@string/sifre"
+        android:textColor="#ffff"
         android:inputType="textPassword" />
 
     <EditText
@@ -51,7 +58,9 @@
         android:layout_below="@+id/kayit_sifre_text"
         android:layout_marginTop="31dp"
         android:ems="10"
+        android:textColorHint="#9c9c9c"
         android:hint="@string/sifre_tekrar"
+        android:textColor="#ffff"
         android:inputType="textPassword" />
 
     <Button
@@ -72,7 +81,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="45dp"
         android:ems="10"
+        android:textColorHint="#9c9c9c"
         android:inputType="textPersonName"
+        android:textColor="#ffff"
         android:hint="Adı Soyadı" />
 
 </RelativeLayout>

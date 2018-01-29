@@ -32,12 +32,13 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
             switch (item.getItemId()) {
 
                  case R.id.navigation_menu:
                     //mTextMessage.setText(R.string.title_menu);
 
-                    navigation.setVisibility(View.INVISIBLE);
+                   // navigation.setVisibility(View.INVISIBLE);
 
                    HomeFragment homeFragment = new HomeFragment();
                    getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, homeFragment, homeFragment.getTag()).commit();

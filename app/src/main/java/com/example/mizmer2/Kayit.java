@@ -1,5 +1,6 @@
 package com.example.mizmer2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -46,7 +47,11 @@ public class Kayit extends AppCompatActivity {
 
             dataBaseHelper.insertContact(c);
 
+            Intent goToGiris=new Intent(this,MainActivity.class);
+            startActivity(goToGiris);
+
         }
+
 
     }
 
