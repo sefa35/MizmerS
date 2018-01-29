@@ -130,8 +130,8 @@ public class SlideActivity extends AppCompatActivity {
     public void finishClicked(View view){
         if (mNextButton.getText().toString().equals("Finish")){
 
-            Intent goToMenu = new Intent(this,NavigationDrawerMenu.class);
-            startActivity(goToMenu);
+            Intent goToExam = new Intent(this,ExamActivity.class);
+            startActivity(goToExam);
 
         }
     }

@@ -29,10 +29,10 @@ public class Menu extends AppCompatActivity {
          Intent goToBizKimiz = new Intent(this, BizKimiz.class);
          startActivity(goToBizKimiz);
      }
-     public void dtmmClicked(View v){
-        Intent goToDtmm = new Intent(this, DTMM.class);
-        startActivity(goToDtmm);
-     }
+//     public void dtmmClicked(View v){
+//        Intent goToDtmm = new Intent(this, DTMM.class);
+//        startActivity(goToDtmm);
+     //}
      public void profilClicked(View v){
         Intent goToProfil = new Intent(this, Profil.class);
         startActivity(goToProfil);
@@ -51,8 +51,8 @@ public class Menu extends AppCompatActivity {
         mBuilder.setPositiveButton("Teste geç", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent goToTest = new Intent(Menu.this, DTMM1.class);
-                startActivity(goToTest);
+//                Intent goToTest = new Intent(Menu.this, DTMM1.class);
+//                startActivity(goToTest);
             }
         });
         mBuilder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {

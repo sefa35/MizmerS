@@ -23,25 +23,17 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Kayit" />
         <activity android:name=".Menu" />
-        <activity android:name=".DTMM1" />
         <activity android:name=".BizKimiz" />
-        <activity android:name=".DTMM" />
         <activity android:name=".Profil" />
         <activity android:name=".Oneri" />
-        <activity android:name=".DTMM2" />
-        <activity android:name=".DTMM3" />
-        <activity android:name=".DTMM4" />
-        <activity android:name=".DTMM5" />
-        <activity android:name=".DTMM6" />
-        <activity android:name=".DTMM7" />
-        <activity android:name=".DTMM8" />
-        <activity android:name=".DTMM9" />
         <activity android:name=".Asama2" />
         <activity android:name=".Sonuc" />
-        <activity android:name=".SlideActivity"/>
+        <activity android:name=".SlideActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".NavigationDrawerMenu"
-            android:label="@string/title_activity_navigation_drawer_menu"></activity>
+            android:label="@string/title_activity_navigation_drawer_menu" />
+        <activity android:name=".ExamActivity"></activity>
     </application>
 
 </manifest>

@@ -37,7 +37,7 @@ public class SliderAdapter extends PagerAdapter {
 
     public String[] slide_descs = {
             "Mizmer uygulamasına hoşgeldiniz",
-            "Tekrardan hoşgeldiniz",
+            "Tekrardan hoşgeldiniz ~~ Mizmer",
             "Test öncesi son bilgilendirme"
     };
 
