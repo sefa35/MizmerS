@@ -68,8 +68,8 @@ public class Dtmm1Fragment extends Fragment {
                                 myListener.sendValToList(val);
 
 
-                                counter++;
-                                textView.setText("reset");
+                                //counter++;
+                                //textView.setText("reset");
 
                                 seekBar.setProgress(0);
 

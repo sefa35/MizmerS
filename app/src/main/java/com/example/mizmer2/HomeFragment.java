@@ -18,10 +18,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.app.*;
+import android.widget.Toast;
 
 
 public class HomeFragment extends Fragment{
 
+    private static int counter = 0;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -49,31 +51,13 @@ public class HomeFragment extends Fragment{
 
         //final MyListener myListener = (MyListener) getActivity();
 
-        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
-        mBuilder.setIcon(R.drawable.logo);
-        mBuilder.setTitle(R.string.popup_title);
-        mBuilder.setMessage(R.string.popup_message);
-        mBuilder.setCancelable(false);
-        mBuilder.setPositiveButton("Teste geç", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                //myListener.goToFragment();
-                Dtmm1Fragment dtmm1Fragment = new Dtmm1Fragment();
-                getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm1Fragment, dtmm1Fragment.getTag()).commit();
-
-
-            }
-        });
-        mBuilder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-            }
-        });
-
-        AlertDialog alertDialog = mBuilder.create();
-        alertDialog.show();
-
+        if (counter < 3) {
+            ArkadasEkleFragment arkadasEkleFragment = new ArkadasEkleFragment();
+            getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadasEkleFragment, arkadasEkleFragment.getTag()).commit();
+            counter++;
+        }else {
+            Toast.makeText(getActivity(),"Daha fazla Arkadaş ekleyemezsiniz!",Toast.LENGTH_SHORT).show();
+        }
 
     }
 

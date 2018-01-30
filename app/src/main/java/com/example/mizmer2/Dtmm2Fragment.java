@@ -43,7 +43,7 @@ public class Dtmm2Fragment extends Fragment {
     private void initSeekBar() {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int value, boolean fromUser) {
+            public void onProgressChanged(final SeekBar seekBar, int value, boolean fromUser) {
                 textView.setText("Normal SeekBar- Value: " + value);
 
                 final int val = value;
@@ -52,12 +52,14 @@ public class Dtmm2Fragment extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        MyListener myListener = (MyListener) getActivity();
-                        myListener.sendValToList(val);
+                        MyListenerForFriend myListenerForFriend = (MyListenerForFriend) getActivity();
+                        myListenerForFriend.sendValToListForFriend(val);
+
+                        seekBar.setProgress(0);
 
 
-                        Dtmm9Fragment dtmm9Fragment = new Dtmm9Fragment();
-                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm9Fragment, dtmm9Fragment .getTag()).commit();
+                        //Dtmm9Fragment dtmm9Fragment = new Dtmm9Fragment();
+                        //getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm9Fragment, dtmm9Fragment .getTag()).commit();
                     }
                 });
 
