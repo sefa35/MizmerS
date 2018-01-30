@@ -4,23 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sonuc_background"
     tools:context="com.example.mizmer2.SonucFragment">
 
-    <TextView
-        android:id="@+id/text_sonuc_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="184dp"
-        android:text="@string/sonuc" />
+
 
     <Button
         android:id="@+id/buton_sonuc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_sonuc_fragment"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
-        android:text="Button" />
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/rounded_button"
+        android:text="Anasayfaya gidiniz"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/text_sonuc_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buton_sonuc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:autoText="false"
+        android:gravity="center"
+        android:paddingBottom="50dp"
+        android:paddingEnd="100dp"
+        android:paddingLeft="75dp"
+        android:text="@string/sonuc"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
 </RelativeLayout>

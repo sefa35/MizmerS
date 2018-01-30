@@ -9,8 +9,7 @@ import android.widget.EditText;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText email,password;
-    private Button signIn,signUp;
+    private Button signIn;
 
 
     @Override
@@ -18,19 +17,16 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        email = findViewById(R.id.in_email);
-        password = findViewById(R.id.in_password);
         signIn = findViewById(R.id.in_sign_in);
-        signUp = findViewById(R.id.in_sign_up);
 
-        signUp.setOnClickListener(this);
+        signIn.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.in_sign_up:
+            case R.id.in_sign_in:
                 startActivity(new Intent(SignInActivity.this,SignUpActivity.class));
         }
     }

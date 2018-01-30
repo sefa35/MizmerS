@@ -51,6 +51,9 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
     @Override
     public void sendValToList(int val) {
 
+        final Bundle bundle1 = new Bundle();
+        bundle1.putInt("forWhom",1);
+
 //        array[i] = val;
 //        i++;
 //
@@ -107,7 +110,6 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
             if (equality.size() == 1){
 
                 SonucFragment sonucFragment = new SonucFragment();
-                Bundle bundle1 = new Bundle();
                 bundle1.putInt("whichquestion",equality.get(0));
                 sonucFragment.setArguments(bundle1);
                 getSupportFragmentManager().beginTransaction().replace(R.id.contentExamLayout, sonucFragment, sonucFragment.getTag()).commit();
@@ -119,7 +121,6 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
             else if(equality.size()==2) {
 
                 Asama2Fragment asama2Fragment = new Asama2Fragment();
-                Bundle bundle1 = new Bundle();
                 bundle1.putInt("equality1", equality.get(0));
                 bundle1.putInt("equality2", equality.get(1));
                 bundle1.putInt("size", equality.size());
@@ -135,7 +136,6 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
             }
             else if (equality.size()==3){
                 Asama2Fragment asama2Fragment = new Asama2Fragment();
-                Bundle bundle1 = new Bundle();
                 bundle1.putInt("equality1", equality.get(0));
                 bundle1.putInt("equality2", equality.get(1));
                 bundle1.putInt("equality3", equality.get(2));
@@ -153,7 +153,6 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
             }
             else{  //IF THERE IS EQUALITY MORE THAN 3 TIMES TAKE THE HIGHEST RATE
                 SonucFragment sonucFragment = new SonucFragment();
-                Bundle bundle1 = new Bundle();
                 bundle1.putInt("whichquestion",equality.get(0));
                 sonucFragment.setArguments(bundle1);
                 getSupportFragmentManager().beginTransaction().replace(R.id.contentExamLayout, sonucFragment, sonucFragment.getTag()).commit();
