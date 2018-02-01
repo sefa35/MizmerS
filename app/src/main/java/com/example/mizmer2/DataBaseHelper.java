@@ -20,11 +20,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_UNAME = "uname";
     private static final String COLUMN_PASS = "pass";
+    //private static final int COLUMN_TYPE = 0;
 
     SQLiteDatabase sqLiteDatabase;
 
     private static final String TABLE_CREATE = "create table contacts (id integer primary key not null , " +
-            "name text not null , email text not null , uname text not null , pass text not null);";
+            "name text not null , email text not null , uname text not null);";
 
     public DataBaseHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -57,10 +58,37 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
+//    public void setColumnType(Contact contact){
+//        sqLiteDatabase = this.getWritableDatabase();
+//        ContentValues val = new ContentValues();
+//
+//        String query = "select * from contacts";
+//        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+//        int counter = cursor.getCount();
+//
+//        val.put(String.valueOf(COLUMN_TYPE), contact.getType());
+//
+//        sqLiteDatabase.insert(TABLE_NAME,null, val );
+//        sqLiteDatabase.close();
+//
+//    }
+//    public void getColumnType(){
+//        sqLiteDatabase = this.getReadableDatabase();
+//        String query = "select type from " + TABLE_NAME;
+//        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+//
+//
+//        int a = 0;
+//        if (cursor.moveToFirst()){
+//            a = cursor.getInt(0);
+//        }
+//    }
+
     public String searchPass(String uname){
         sqLiteDatabase = this.getReadableDatabase();
         String query = "select uname, pass from "+TABLE_NAME;
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+
 
         String a, b;
         b = "not found";

@@ -22,7 +22,7 @@
     <string name="title_aboutUs">Biz Kimiz?</string>
     <string name="title_dtmm">DTMM</string>
     <string name="title_profile">Profil</string>
-    <string name="title_suggestions">Öneri</string>
+    <string name="title_suggestions">Arkadaş</string>
 
 
     <string name="ilgisiz">İLGİSİZ</string>
@@ -48,7 +48,7 @@
     <string name="textview">TextView</string>
     <string name="asama2">Aşama2</string>
     <string name="sonuc">Sonuc</string>
-    <string name="title_activity_navigation_drawer_menu">NavigationDrawerMenu</string>
+    <string name="title_activity_navigation_drawer_menu">Mizmer</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
