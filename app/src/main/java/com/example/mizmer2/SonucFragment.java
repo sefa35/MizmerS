@@ -47,6 +47,7 @@ public class SonucFragment extends Fragment {
         sonuc.setTextColor(Color.BLUE);
 
 
+
         sonucBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
