@@ -33,6 +33,8 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 
         textTest = (TextView)findViewById(R.id.textViewExam);
 
+        textTest.setVisibility(View.INVISIBLE);
+
 
     }
 
