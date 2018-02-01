@@ -8,6 +8,7 @@ public class Contact {
 
     //int id;
     String name, email, uname, pass;
+    //int type;
 
 //    public int getId() {
 //        return id;
@@ -48,4 +49,11 @@ public class Contact {
     public void setPass(String pass) {
         this.pass = pass;
     }
+
+//    public int getType() {
+//        return type;
+//    }
+//    public void setType(int type){
+//        this.type = type;
+//    }
 }

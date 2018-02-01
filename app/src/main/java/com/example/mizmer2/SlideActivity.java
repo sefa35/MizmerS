@@ -96,7 +96,7 @@ public class SlideActivity extends AppCompatActivity {
                 mBackButton.setEnabled(false);
                 mBackButton.setVisibility(View.INVISIBLE);
 
-                mNextButton.setText("Next");
+                mNextButton.setText("İleri");
                 mBackButton.setText("");
 
             }else if (position == mDots.length-1){
@@ -105,8 +105,8 @@ public class SlideActivity extends AppCompatActivity {
                 mBackButton.setEnabled(true);
                 mBackButton.setVisibility(View.VISIBLE);
 
-                mNextButton.setText("Finish");
-                mBackButton.setText("Back");
+                mNextButton.setText("SON");
+                mBackButton.setText("Geri");
 
             }else {
 
@@ -114,8 +114,8 @@ public class SlideActivity extends AppCompatActivity {
                 mBackButton.setEnabled(true);
                 mBackButton.setVisibility(View.VISIBLE);
 
-                mNextButton.setText("Next");
-                mBackButton.setText("Back");
+                mNextButton.setText("İleri");
+                mBackButton.setText("Geri");
 
             }
 
@@ -128,7 +128,7 @@ public class SlideActivity extends AppCompatActivity {
     };
 
     public void finishClicked(View view){
-        if (mNextButton.getText().toString().equals("Finish")){
+        if (mNextButton.getText().toString().equals("SON")){
 
             Intent goToExam = new Intent(this,ExamActivity.class);
             startActivity(goToExam);

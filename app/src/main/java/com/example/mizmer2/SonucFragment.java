@@ -18,7 +18,7 @@ import android.widget.TextView;
  */
 public class SonucFragment extends Fragment {
 
-    Button sonucBttn;
+    Button sonucBttn, ayrintili_bilgiBttn;
     TextView sonuc ;
     int indexOfDTMM, forWhom;
 
@@ -35,6 +35,7 @@ public class SonucFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_sonuc, container, false);
 
         sonucBttn = (Button)v.findViewById(R.id.buton_sonuc);
+        ayrintili_bilgiBttn = (Button)v.findViewById(R.id.buton_ayrıntılı_bilgi);
         sonuc = (TextView)v.findViewById(R.id.text_sonuc_fragment);
 
         Bundle bundle = getArguments();
@@ -53,8 +54,13 @@ public class SonucFragment extends Fragment {
             public void onClick(View view) {
                 Intent goToNDM = new Intent(getActivity().getApplication(), NavigationDrawerMenu.class);
                 startActivity(goToNDM);
+            }
+        });
 
-
+        ayrintili_bilgiBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity().getApplication(), AyrintiliBilgi.class ));
             }
         });
 

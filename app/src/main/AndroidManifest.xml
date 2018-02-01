@@ -28,12 +28,15 @@
         <activity android:name=".Oneri" />
         <activity android:name=".Asama2" />
         <activity android:name=".Sonuc" />
-        <activity android:name=".SlideActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SlideActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NavigationDrawerMenu"
             android:label="@string/title_activity_navigation_drawer_menu" />
-        <activity android:name=".ExamActivity"></activity>
+        <activity android:name=".ExamActivity" />
+        <activity android:name=".AyrintiliBilgi"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
