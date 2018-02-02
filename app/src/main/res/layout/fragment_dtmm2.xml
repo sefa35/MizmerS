@@ -27,6 +27,7 @@
         android:layout_marginTop="315dp"
         android:max="100"
         android:progress="0"
+        android:progressDrawable="@drawable/seekbar_progress"
         app:layout_constraintBottom_toTopOf="@+id/ilerleBtn2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

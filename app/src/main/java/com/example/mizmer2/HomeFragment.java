@@ -21,7 +21,8 @@ import android.app.*;
 import android.widget.Toast;
 
 
-public class HomeFragment extends Fragment{
+public class
+HomeFragment extends Fragment{
 
     private static int counter = 0;
 

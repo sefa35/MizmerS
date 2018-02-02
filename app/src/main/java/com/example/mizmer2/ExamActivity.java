@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 
     Button bttn;
     FrameLayout frameLayout;
-
+    ImageView ımageView;
     TextView textTest;
 
     public static ArrayList arrayList = new ArrayList();
@@ -31,6 +32,8 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 
         bttn =(Button)findViewById(R.id.button);
 
+        ımageView=(ImageView)findViewById(R.id.examImage);
+
         textTest = (TextView)findViewById(R.id.textViewExam);
 
         textTest.setVisibility(View.INVISIBLE);
@@ -41,6 +44,7 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
     public void onClicked(View view){
 
         bttn.setVisibility(View.INVISIBLE);
+        ımageView.setVisibility(View.INVISIBLE);
 
         Dtmm1Fragment dtmm1Fragment = new Dtmm1Fragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contentExamLayout, dtmm1Fragment, dtmm1Fragment.getTag()).commit();

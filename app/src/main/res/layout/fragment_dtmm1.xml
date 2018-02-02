@@ -9,14 +9,27 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/text_dtmm1"
-        android:layout_width="wrap_content"
+        android:layout_width="381dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
         android:paddingBottom="300dp"
         android:paddingLeft="40dp"
         android:paddingRight="20dp"
         android:text="@string/dtmm1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/seekBarValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="404dp"
+        android:text="0"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +43,7 @@
         android:layout_marginTop="340dp"
         android:max="100"
         android:progress="0"
+        android:progressDrawable="@drawable/seekbar_progress"
         app:layout_constraintBottom_toTopOf="@+id/ilerleBtn1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +57,7 @@
         android:layout_marginEnd="32dp"
         android:text="@string/ilerle"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/rounded_button2"
+        android:background="@drawable/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar1" />

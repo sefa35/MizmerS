@@ -46,7 +46,6 @@ public class  MainActivity extends AppCompatActivity {
             temp.show();
         }
 
-// sadasd
 
     }
     public void kayıt(View v) {

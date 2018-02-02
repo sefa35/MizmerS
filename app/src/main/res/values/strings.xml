@@ -52,6 +52,28 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="biz_kimiz_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</string>
+    <string name="dtmm_text">DTM1: Kusursuzluğu Arayan Mizaç Tip
+
+DTM2: Duyguları Hissetmeyi Arayan Mizaç Tipi
+
+DTM3: Hayran Olunacak Kendilik İmajı Arayan Mizaç Tipi
+
+DTM4: Duyguların Anlamını Arayan Mizaç Tipi
+
+DTM5: Bilginin Anlamına Ulaşmayı Arayan Mizaç Tipi
+
+DTM6: Entelektüel Dinginlik Arayan Mizaç Tipi
+
+DTM7: Keşfetmenin Hazzını Arayan Mizaç Tipi
+
+DTM8: Mutlak Güç Arayan Mizaç Tipi
+
+DTM9: Duyumsal-Hareketsel Konfor Arayan Mizaç Tipi</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

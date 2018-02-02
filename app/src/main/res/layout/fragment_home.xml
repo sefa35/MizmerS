@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
@@ -10,28 +10,56 @@
 
     <Button
         android:id="@+id/buttonZ"
-        android:layout_width="0dp"
-        android:layout_height="199dp"
-        android:layout_marginBottom="132dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginStart="59dp"
-        android:text="@string/start_test"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"
         android:background="@drawable/image_test_kisi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/start_test"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="228dp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Anasayfa"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+    <Button
+        android:id="@+id/buttonZ1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/image_test_kisi"
+        android:text="@string/start_test"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="228dp"/>
+    <Button
+        android:id="@+id/buttonZ2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/image_test_kisi"
+        android:text="@string/start_test"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="228dp"/>
 
+    <Button
+        android:id="@+id/buttonZ3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/image_test_kisi"
+        android:text="@string/start_test"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="228dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:text="ANASAYFA"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

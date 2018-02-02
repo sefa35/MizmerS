@@ -20,7 +20,7 @@ import android.support.v4.app.FragmentTransaction;
 public class Dtmm1Fragment extends Fragment {
 
     Button button;
-    TextView textView;
+    TextView textView,seekBarValue;
     SeekBar seekBar;
 
     public static int counter = 1;
@@ -36,7 +36,8 @@ public class Dtmm1Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_dtmm1, container, false);
-        textView = (TextView)v.findViewById(R.id.text_dtmm1);
+        textView = (TextView) v.findViewById(R.id.text_dtmm1);
+        seekBarValue = (TextView)v.findViewById(R.id.seekBarValue);
         button = (Button)v.findViewById(R.id.ilerleBtn1);
         seekBar = (SeekBar)v.findViewById(R.id.seekBar1);
         button.setOnClickListener(null);
@@ -67,7 +68,7 @@ public class Dtmm1Fragment extends Fragment {
             @Override
             public void onProgressChanged(final SeekBar seekBar, final int value, boolean fromUser) {
                 //textView.setText("Normal SeekBar- Value: " + value);
-
+                //seekBarValue.setText(value);
                 final int val = value;
 
 

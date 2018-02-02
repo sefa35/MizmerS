@@ -57,12 +57,15 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
                     return true;
                 case R.id.navigation_profile:
                     //mTextMessage.setText(R.string.title_profile);
+
                     return true;
                 case R.id.navigation_suggestions:
                     //mTextMessage.setText(R.string.title_suggestions);
                     return true;
                 case R.id.navigation_aboutUs:
                     //mTextMessage.setText(R.string.title_aboutUs);
+                    BizKimiz bizKimiz = new BizKimiz();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout,bizKimiz,bizKimiz.getTag()).commit();
                     return true;
             }
             return false;
