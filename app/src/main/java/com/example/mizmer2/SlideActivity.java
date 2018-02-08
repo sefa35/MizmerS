@@ -130,8 +130,8 @@ public class SlideActivity extends AppCompatActivity {
     public void finishClicked(View view){
         if (mNextButton.getText().toString().equals("SON")){
 
-            Intent goToExam = new Intent(this,ExamActivity.class);
-            startActivity(goToExam);
+            Intent goToNDM = new Intent(this,NavigationDrawerMenu.class);
+            startActivity(goToNDM);
 
         }
     }

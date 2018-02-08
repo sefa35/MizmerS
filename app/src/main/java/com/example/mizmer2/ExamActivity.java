@@ -115,6 +115,8 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
             //***************************************** EQUALITY RULES
             if (equality.size() == 1){
 
+                resetSendingValInterface();
+
                 SonucFragment sonucFragment = new SonucFragment();
                 bundle1.putInt("whichquestion",equality.get(0));
                 sonucFragment.setArguments(bundle1);
@@ -125,6 +127,8 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 //                            startActivity(goToSonuc);
             }
             else if(equality.size()==2) {
+
+                resetSendingValInterface();
 
                 Asama2Fragment asama2Fragment = new Asama2Fragment();
                 bundle1.putInt("equality1", equality.get(0));
@@ -141,6 +145,9 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 //                            startActivity(goToAsama2);
             }
             else if (equality.size()==3){
+
+                resetSendingValInterface();
+
                 Asama2Fragment asama2Fragment = new Asama2Fragment();
                 bundle1.putInt("equality1", equality.get(0));
                 bundle1.putInt("equality2", equality.get(1));
@@ -158,6 +165,9 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 //                            startActivity(goToAsama2);
             }
             else{  //IF THERE IS EQUALITY MORE THAN 3 TIMES TAKE THE HIGHEST RATE
+
+                resetSendingValInterface();
+
                 SonucFragment sonucFragment = new SonucFragment();
                 bundle1.putInt("whichquestion",equality.get(0));
                 sonucFragment.setArguments(bundle1);
@@ -174,6 +184,15 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
         }
 
 
+    }
+
+    private void resetSendingValInterface() {
+        i = 0; //To make this method DYNAMIC
+        while (!arrayList.isEmpty()){
+            int k = 0;
+            arrayList.remove(k);
+            k++;
+        }
     }
 
 

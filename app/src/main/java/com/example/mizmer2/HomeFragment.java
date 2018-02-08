@@ -24,6 +24,7 @@ import android.widget.Toast;
 public class
 HomeFragment extends Fragment{
 
+    private Button goToTest, firstFriend, addFriend;
     private static int counter = 0;
 
     public HomeFragment() {
@@ -36,32 +37,42 @@ HomeFragment extends Fragment{
 
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
-        final Button bt = (Button)v.findViewById(R.id.buttonZ);
-        bt.setOnClickListener(new View.OnClickListener() {
+        goToTest = (Button)v.findViewById(R.id.button_test_coz);
+        firstFriend = (Button)v.findViewById(R.id.button_arkadaş1);
+        addFriend = (Button)v.findViewById(R.id.button_arkadas_ekle);
+
+        goToTest.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                buttonClicked();
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity().getApplication(), ExamActivity.class ));
+
+            }
+        });
+        firstFriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ArkadaslarFragment arkadaslarFragment = new ArkadaslarFragment();
+                getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadaslarFragment, arkadaslarFragment.getTag()).commit();
+
+            }
+        });
+        addFriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (counter < 3) {
+                    ArkadasEkleFragment arkadasEkleFragment = new ArkadasEkleFragment();
+                    getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadasEkleFragment, arkadasEkleFragment.getTag()).commit();
+                    counter++;
+                }else {
+                    Toast.makeText(getActivity(),"Daha fazla Arkadaş ekleyemezsiniz!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
+
         return v;
     }
-
-
-    private void buttonClicked() {
-
-        //final MyListener myListener = (MyListener) getActivity();
-
-        if (counter < 3) {
-            ArkadasEkleFragment arkadasEkleFragment = new ArkadasEkleFragment();
-            getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadasEkleFragment, arkadasEkleFragment.getTag()).commit();
-            counter++;
-        }else {
-            Toast.makeText(getActivity(),"Daha fazla Arkadaş ekleyemezsiniz!",Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
 
 
 }

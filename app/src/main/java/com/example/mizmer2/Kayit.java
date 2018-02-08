@@ -32,7 +32,7 @@ public class Kayit extends AppCompatActivity {
         String pass2Str = pass2.getText().toString();
 
         if (!pass1Str.equals(pass2Str)){   //IF CONFİRM PASS AND PASS IS NOT THE SAME
-            Toast pass = Toast.makeText(Kayit.this, "Passwords don't match!", Toast.LENGTH_SHORT);
+            Toast pass = Toast.makeText(Kayit.this, "Şifreler eşleşmedi!", Toast.LENGTH_SHORT);
             pass.show();
         }
         else {

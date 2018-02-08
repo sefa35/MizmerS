@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "131448888516",
+    "firebase_url": "https://mizmer-14b08.firebaseio.com",
+    "project_id": "mizmer-14b08",
+    "storage_bucket": "mizmer-14b08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131448888516:android:0e34e0fd4494a6af",
+        "android_client_info": {
+          "package_name": "com.example.mizmer2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131448888516-ucgltk5slpcq20htssapni23m8adajbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ttXfiTYZHiLC9N4gYGThL0NTtfa_CAc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

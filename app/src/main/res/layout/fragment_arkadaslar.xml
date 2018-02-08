@@ -1,0 +1,78 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mizmer2.ArkadaslarFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textViewWho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="1. Arkadaşım"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginStart="27dp"
+        android:text="İsim Soyisim"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewType"
+        app:layout_constraintEnd_toStartOf="@+id/button_retest"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:text="Mizaç : DTM 2-3"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_retest"
+        app:layout_constraintEnd_toStartOf="@+id/button_retest" />
+
+    <Button
+        android:id="@+id/button_düzenle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginTop="38dp"
+        android:text="Düzenle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_retest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Testi Tekrar Yapmak İstiyorum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewName"
+        app:layout_constraintTop_toBottomOf="@+id/button_düzenle" />
+
+    <Button
+        android:id="@+id/button_rapor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="45dp"
+        android:text="Arkadaşının mizaç raporu"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_retest" />
+</android.support.constraint.ConstraintLayout>
