@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -15,10 +17,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 
 public class Kayit extends AppCompatActivity {
 
     private EditText name,email,username,pass1,pass2;
+    private Button olustur;
     DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
 
     private ProgressDialog progressDialog;
@@ -34,10 +38,13 @@ public class Kayit extends AppCompatActivity {
          username = (EditText)findViewById(R.id.kayit_kullanıcıadı_text);
          pass1 = (EditText)findViewById(R.id.kayit_sifre_text);
          pass2 = (EditText)findViewById(R.id.kayit_sifre2_text);
+         olustur = (Button)findViewById(R.id.kayitOlusturBttn);
 
         progressDialog = new ProgressDialog(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+
 
     }
 
@@ -63,8 +70,8 @@ public class Kayit extends AppCompatActivity {
             return;
         }
 
-        progressDialog.setMessage("Registering user..");
-        progressDialog.show();
+        //progressDialog.setMessage("Registering user..");
+        //progressDialog.show();
 
         if (!pass1Str.equals(pass2Str)){   //IF CONFİRM PASS AND PASS IS NOT THE SAME
             Toast pass = Toast.makeText(Kayit.this, "Şifreler eşleşmedi!", Toast.LENGTH_SHORT);
@@ -83,14 +90,18 @@ public class Kayit extends AppCompatActivity {
 //            dataBaseHelper.insertContact(c);
 
             firebaseAuth.createUserWithEmailAndPassword(emailStr, pass1Str)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    .addOnCompleteListener(Kayit.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
                                 Toast.makeText(Kayit.this,"Kayıt yapıldı", Toast.LENGTH_SHORT ).show();
                             }else {
-                                Toast.makeText(Kayit.this,"Kayıt başarız. Tekrar deneyiniz", Toast.LENGTH_SHORT ).show();
+                                //Toast.makeText(Kayit.this,"Kayıt başarız. Tekrar deneyiniz", Toast.LENGTH_SHORT ).show();
 
+                                FirebaseAuthException e = (FirebaseAuthException)task.getException();
+                                Toast.makeText(Kayit.this, "Failed registration: "+ e.getMessage(),Toast.LENGTH_SHORT).show();
+                                
+                                Log.e("Kayit", "Failed Registration -- ",e);
                             }
                         }
                     });

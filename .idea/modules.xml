@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Android Applications\Mizmer5\.idea\Mizmer1.iml" filepath="C:\Android Applications\Mizmer5\.idea\Mizmer1.iml" />
-      <module fileurl="file://C:\Users\Sefa\AndroidStudioProjects\Mizmer1\.idea\Mizmer2.iml" filepath="C:\Users\Sefa\AndroidStudioProjects\Mizmer1\.idea\Mizmer2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mizmer5.iml" filepath="$PROJECT_DIR$/Mizmer5.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Android Applications\Mizmer5\app\app.iml" filepath="C:\Android Applications\Mizmer5\app\app.iml" />
     </modules>
   </component>
 </project>
