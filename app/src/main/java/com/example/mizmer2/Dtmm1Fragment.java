@@ -76,8 +76,7 @@ public class Dtmm1Fragment extends Fragment {
                 //seekBarValue.setText(value);
                 final int val = value;
 
-
-
+                seekBarValue.setText(val);
 
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override

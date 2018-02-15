@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class NavigationDrawerMenu extends AppCompatActivity implements MyListenerForFriend{
 
-    private TextView mTextMessage, textTest;
+    private TextView mTextMessage;
     public static ArrayList arrayList = new ArrayList();
     public static int[] array = new int[9];
 
@@ -89,7 +89,6 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer_menu);
 
-        textTest = (TextView) findViewById(R.id.textTestArray);
         mTextMessage = (TextView) findViewById(R.id.message);
          navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -118,7 +117,7 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
 
         arrayList.add(val);
         if (!String.valueOf(arrayList.size()).equals(null))
-            textTest.setText(String.valueOf(arrayList.get(i))); // TO SEE WHETHER WE CAN INSERT ELEMENTS TO ARRAYLIST OR NOT
+            //textTest.setText(String.valueOf(arrayList.get(i))); // TO SEE WHETHER WE CAN INSERT ELEMENTS TO ARRAYLIST OR NOT
 
         i++;
 
