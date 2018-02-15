@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.app.*;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -26,6 +30,11 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
 
     int answer1=0, answer2=0, answer3=0, answer4=0, answer5=0, answer6=0, answer7=0, answer8=0, answer9=0;
     public static int i = 0;
+
+    private String nameStr,emailStr,usernameStr,pass1Str;
+    private int type;
+    private DatabaseReference databaseReference;
+
 
     BottomNavigationView navigation;
 
@@ -90,7 +99,7 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
         homeFragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, homeFragment, homeFragment.getTag()).commit();
 
-
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
     }
 
@@ -161,6 +170,19 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
 
                 SonucFragment sonucFragment = new SonucFragment();
                 bundle1.putInt("whichquestion",equality.get(0));
+
+//                Bundle extras = getIntent().getExtras();
+//                nameStr = extras.getString("name");
+//                emailStr = extras.getString("email");
+//                usernameStr = extras.getString("username");
+//                pass1Str = extras.getString("password");
+//
+//                Toast.makeText(this,nameStr+"-"+emailStr+"-"+usernameStr+"-"+pass1Str,Toast.LENGTH_LONG).show();
+//                Contact contact = new Contact(nameStr, emailStr, usernameStr, pass1Str, equality.get(0));
+//                databaseReference.child(emailStr.replace('.',' ')).setValue(contact);
+
+
+
                 sonucFragment.setArguments(bundle1);
                 getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, sonucFragment, sonucFragment.getTag()).commit();
 

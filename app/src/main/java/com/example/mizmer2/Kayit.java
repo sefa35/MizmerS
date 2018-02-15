@@ -18,10 +18,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Kayit extends AppCompatActivity {
 
     private EditText name,email,username,pass1,pass2;
+    public static String nameStr,emailStr,usernameStr,pass1Str,pass2Str;
+
     private Button olustur;
     DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
 
@@ -29,10 +34,23 @@ public class Kayit extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
 
+    private DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kayit);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
+//        if (firebaseAuth.getCurrentUser() != null){
+//            //profile activity here
+//            finish();
+//            startActivity(new Intent(getApplicationContext(), SlideActivity.class));
+//        }
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
          name = (EditText)findViewById(R.id.kayit_id_text);
          email = (EditText)findViewById(R.id.kayit_mail_text);
          username = (EditText)findViewById(R.id.kayit_kullanıcıadı_text);
@@ -40,23 +58,62 @@ public class Kayit extends AppCompatActivity {
          pass2 = (EditText)findViewById(R.id.kayit_sifre2_text);
          olustur = (Button)findViewById(R.id.kayitOlusturBttn);
 
+
+
+
         progressDialog = new ProgressDialog(this);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+
 
 
 
     }
 
+    private void saveUserInformation(){
 
+        if (nameStr.equals(name.getText().toString())) {
+
+            Toast.makeText(this, "Bilgiler database içine kaydedildi.."+emailStr+usernameStr, Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
     public void onOlusturBttnClicked(View v){
 
-        String nameStr = name.getText().toString();
-        String emailStr = email.getText().toString();
-        String usernameStr = username.getText().toString();
-        String pass1Str = pass1.getText().toString();
-        String pass2Str = pass2.getText().toString();
+
+        nameStr = name.getText().toString().trim();
+        emailStr = email.getText().toString().trim();
+        usernameStr = username.getText().toString().trim();
+        pass1Str = pass1.getText().toString().trim();
+        pass2Str = pass2.getText().toString().trim();
+
+
+
+
+        Bundle bundle = new Bundle();
+        SonucFragment sonucFragment = new SonucFragment();
+
+        bundle.putString("name", nameStr);
+        bundle.putString("email",emailStr);
+        bundle.putString("username", usernameStr);
+        bundle.putString("password", pass1Str);
+        sonucFragment.setArguments(bundle);
+//
+//        Intent navigationDrawerMenu = new Intent(this, NavigationDrawerMenu.class);
+//        navigationDrawerMenu.putExtra("name", nameStr);
+//        navigationDrawerMenu.putExtra("email",emailStr);
+//        navigationDrawerMenu.putExtra("username", usernameStr);
+//        navigationDrawerMenu.putExtra("password", pass1Str);
+
+        Contact contact = new Contact(nameStr,emailStr, usernameStr, pass1Str, 0);
+        //FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        databaseReference.child(emailStr.replace('.',' ')).setValue(contact);
+        //databaseReference.child(user.getUid()).setValue(contact);
+
+
+
+
 
         if (TextUtils.isEmpty(emailStr)){
             //email is empty
@@ -70,8 +127,8 @@ public class Kayit extends AppCompatActivity {
             return;
         }
 
-        //progressDialog.setMessage("Registering user..");
-        //progressDialog.show();
+  //      progressDialog.setMessage("Registering user..");
+//        progressDialog.show();
 
         if (!pass1Str.equals(pass2Str)){   //IF CONFİRM PASS AND PASS IS NOT THE SAME
             Toast pass = Toast.makeText(Kayit.this, "Şifreler eşleşmedi!", Toast.LENGTH_SHORT);
@@ -94,23 +151,39 @@ public class Kayit extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                Toast.makeText(Kayit.this,"Kayıt yapıldı", Toast.LENGTH_SHORT ).show();
+
+                                Toast.makeText(Kayit.this,"Kayıt yapıldı"+emailStr+nameStr, Toast.LENGTH_SHORT ).show();
+//                                Contact contact = new Contact(nameStr,emailStr, usernameStr, pass1Str, 0);
+//
+
+//                                FirebaseUser user = firebaseAuth.getCurrentUser();
+//
+//                                databaseReference.child(user.getEmail()).setValue(contact);
+
+
+                                //saveUserInformation();
+
+                                finish();
+                                startActivity(new Intent(getApplicationContext(), SlideActivity.class));
                             }else {
                                 //Toast.makeText(Kayit.this,"Kayıt başarız. Tekrar deneyiniz", Toast.LENGTH_SHORT ).show();
 
                                 FirebaseAuthException e = (FirebaseAuthException)task.getException();
                                 Toast.makeText(Kayit.this, "Failed registration: "+ e.getMessage(),Toast.LENGTH_SHORT).show();
-                                
+
+                                progressDialog.hide();
                                 Log.e("Kayit", "Failed Registration -- ",e);
                             }
                         }
                     });
+
 
 //            startActivity(new Intent(Kayit.this,MainActivity.class));
 
 
 
         }
+
 
 
 

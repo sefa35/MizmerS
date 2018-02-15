@@ -8,8 +8,18 @@ public class Contact {
 
     //int id;
     String name, email, uname, pass;
-    //int type;
+    int type;
 
+    public Contact() {
+    }
+
+    public Contact(String name, String email, String uname, String pass, int type) {
+        this.name = name;
+        this.email = email;
+        this.uname = uname;
+        this.pass = pass;
+        this.type = type;
+    }
 //    public int getId() {
 //        return id;
 //    }
@@ -50,10 +60,10 @@ public class Contact {
         this.pass = pass;
     }
 
-//    public int getType() {
-//        return type;
-//    }
-//    public void setType(int type){
-//        this.type = type;
-//    }
+    public int getType() {
+        return type;
+    }
+    public void setType(int type){
+        this.type = type;
+    }
 }

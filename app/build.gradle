@@ -1,11 +1,14 @@
+
 apply plugin: 'com.android.application'
+
+
 
 android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.mizmer2"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion 14
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -34,6 +37,7 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:11.8.0'
     compile 'com.google.firebase:firebase-database:11.8.0'
     compile 'com.google.firebase:firebase-crash:11.8.0'
+
 
 
 }

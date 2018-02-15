@@ -20,12 +20,15 @@ import android.widget.Button;
 import android.app.*;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class
 HomeFragment extends Fragment{
 
-    private Button goToTest, firstFriend, addFriend;
+    private Button goToTest, firstFriend, addFriend, cıkıs;
     private static int counter = 0;
+    private FirebaseAuth firebaseAuth;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -37,9 +40,27 @@ HomeFragment extends Fragment{
 
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        if (firebaseAuth.getCurrentUser() == null){
+            startActivity(new Intent(getActivity().getApplication(), MainActivity.class ));
+
+        }
+
         goToTest = (Button)v.findViewById(R.id.button_test_coz);
         firstFriend = (Button)v.findViewById(R.id.button_arkadaş1);
         addFriend = (Button)v.findViewById(R.id.button_arkadas_ekle);
+        cıkıs = v.findViewById(R.id.button_cıkıs);
+
+        cıkıs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                firebaseAuth.signOut();
+                startActivity(new Intent(getActivity().getApplication(), MainActivity.class));
+
+            }
+        });
 
         goToTest.setOnClickListener(new View.OnClickListener() {
             @Override
