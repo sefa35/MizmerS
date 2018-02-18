@@ -21,7 +21,7 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
     public static int[] array = new int[9];
 
     int answer1=0, answer2=0, answer3=0, answer4=0, answer5=0, answer6=0, answer7=0, answer8=0, answer9=0;
-    public static int i = 0;
+    private static int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +66,8 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 //        textTest.setText(String.valueOf(array[i]));
 
         arrayList.add(val);
-        if (!String.valueOf(arrayList.size()).equals(null))
-            textTest.setText(String.valueOf(arrayList.get(i))); // TO SEE WHETHER WE CAN INSERT ELEMENTS TO ARRAYLIST OR NOT
+        //if (!String.valueOf(arrayList.size()).equals(null))
+            //textTest.setText(String.valueOf(arrayList.get(i))); // TO SEE WHETHER WE CAN INSERT ELEMENTS TO ARRAYLIST OR NOT
 
         i++;
 

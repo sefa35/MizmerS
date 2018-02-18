@@ -29,7 +29,7 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
 
 
     int answer1=0, answer2=0, answer3=0, answer4=0, answer5=0, answer6=0, answer7=0, answer8=0, answer9=0;
-    public static int i = 0;
+    private static int i = 0;
 
     private String nameStr,emailStr,usernameStr,pass1Str;
     private int type;
@@ -116,7 +116,7 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
 //        textTest.setText(String.valueOf(array[i]));
 
         arrayList.add(val);
-        if (!String.valueOf(arrayList.size()).equals(null))
+        //if (!String.valueOf(arrayList.size()).equals(null))
             //textTest.setText(String.valueOf(arrayList.get(i))); // TO SEE WHETHER WE CAN INSERT ELEMENTS TO ARRAYLIST OR NOT
 
         i++;

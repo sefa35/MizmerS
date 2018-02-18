@@ -23,7 +23,7 @@ public class Dtmm1Fragment extends Fragment {
     TextView textView,seekBarValue;
     SeekBar seekBar;
 
-    public static int counter = 1;
+    private int counter = 1;
 
 
     public Dtmm1Fragment() {
@@ -35,7 +35,6 @@ public class Dtmm1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        setQuestions();  //changing the questions up to the 9
 
         View v = inflater.inflate(R.layout.fragment_dtmm1, container, false);
         textView = (TextView) v.findViewById(R.id.text_dtmm1);
@@ -44,10 +43,10 @@ public class Dtmm1Fragment extends Fragment {
         seekBar = (SeekBar)v.findViewById(R.id.seekBar1);
         button.setOnClickListener(null);
 
-            initSeekBar();
 
         if (counter % 9 == 1) textView.setText("1- Arkadaşım; çevresiyle uyumlu olmaya ve kurallara uymaya özen gösteren, görev ve sorumluluklarına dikkat eden, hesaplı ve kontrollü hareket etmeye çalışan, belirsizlikten çok rahatsız olan, titiz ve düzenli olmaya eğilimli biridir. Güven ve emniyete çok fazla önem verir. İnsanlara güven duyana kadar kendisiyle ilgili pek bir şey anlatmamayı tercih eder. Bir durum karşısında aklına olumlu-olumsuz tüm ihtimaller gelir. Kendini en kötü ihtimale göre hazırlayıp önlem almayı tercih eder. Her tür bilgiyi gelecekte lazım olabilir diye depolar. Karar verirken tüm ihtimalleri hesapladığından karar vermekte zorlanabilir. Yaşamında bilgili, kendinden emin, kararlı ve güvenebileceği birinden akıl almaya çok önem verir ve bu kişinin yönlendirmelerine uygun davranmaya çalışır.");
 
+        initSeekBar();
 
 
         return v;
@@ -76,7 +75,7 @@ public class Dtmm1Fragment extends Fragment {
                 //seekBarValue.setText(value);
                 final int val = value;
 
-                seekBarValue.setText(val);
+                seekBarValue.setText(String.valueOf(val));
 
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -87,8 +86,10 @@ public class Dtmm1Fragment extends Fragment {
                             MyListener myListener = (MyListener) getActivity();
                                 myListener.sendValToList(val);
 
+                            counter++;
 
-                                counter++;
+                            setQuestions();  //changing the questions up to the 9
+
                                 //textView.setText("reset");
 
                                 seekBar.setProgress(0);

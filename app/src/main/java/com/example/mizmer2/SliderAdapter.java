@@ -30,14 +30,14 @@ public class SliderAdapter extends PagerAdapter {
     };
 
     public String[] slide_headings = {
-            "EAT",
-            "SLEEP",
-            "CODE"
+            "TİP",
+            "MİZAÇ",
+            "MODEL"
     };
 
     public String[] slide_descs = {
             "Mizmer uygulamasına hoşgeldiniz",
-            "Tekrardan hoşgeldiniz ~~ Mizmer",
+            "Micazını belirle ~~ Mizmer",
             "Test öncesi son bilgilendirme"
     };
 
