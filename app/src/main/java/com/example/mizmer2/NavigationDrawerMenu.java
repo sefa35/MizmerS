@@ -64,10 +64,10 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
                     getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmmFragment, dtmmFragment.getTag()).commit();
 
                     return true;
-                case R.id.navigation_profile:
-                    //mTextMessage.setText(R.string.title_profile);
-
-                    return true;
+//                case R.id.navigation_profile:
+//                    //mTextMessage.setText(R.string.title_profile);
+//
+//                    return true;
                 case R.id.navigation_suggestions:
                     //mTextMessage.setText(R.string.title_suggestions);
                     return true;

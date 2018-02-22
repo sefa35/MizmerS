@@ -1,75 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginbc"
+    android:background="@drawable/arkaplan_blurlu"
     tools:context="com.example.mizmer2.MainActivity">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_above="@+id/sifre_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
         android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logom" />
 
     <EditText
         android:id="@+id/kullanıcı_adı_text"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_above="@+id/sifre_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
-        android:background="#11000000"
-        android:drawableStart="@drawable/ic_action_user"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        android:drawableLeft="@drawable/ic_action_user"
         android:ems="10"
+        android:textColor="#000"
         android:hint="@string/kullan_c_ad_mail"
-        android:textColorHint="#363636"
         android:inputType="textPersonName"
-        android:textSize="16sp" />
+        android:textColorHint="#363636"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/sifre_text"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_alignBottom="@+id/girisBttn"
+        android:layout_alignLeft="@+id/kullanıcı_adı_text"
         android:layout_alignStart="@+id/kullanıcı_adı_text"
-        android:layout_marginBottom="75dp"
-        android:background="#11000000"
-        android:drawableStart="@drawable/ic_action_pass"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        android:drawableLeft="@drawable/ic_action_pass"
         android:ems="10"
+        android:textColor="#000"
         android:hint="@string/sifre"
-        android:textColorHint="#363636"
         android:inputType="textPassword"
-        android:textSize="16sp" />
+        android:textColorHint="#363636"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kullanıcı_adı_text" />
 
     <Button
         android:id="@+id/girisBttn"
         android:layout_width="250dp"
         android:layout_height="55dp"
-        android:layout_above="@+id/kayıtBttn"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/rounded_button2"
         android:onClick="girisClicked"
-        android:text="@string/giris" />
+        android:text="@string/giris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_rememberme" />
 
-    <Button
-        android:id="@+id/kayıtBttn"
+
+    <CheckBox
+        android:id="@+id/login_email_check"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:onClick="kayıt"
-        android:text="@string/kayıt_olustur"
-        android:textColor="@color/colorAccent"
-        android:textSize="10dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="#E8922C"
+        app:layout_constraintBottom_toBottomOf="@+id/kullanıcı_adı_text"
+        app:layout_constraintEnd_toEndOf="@+id/kullanıcı_adı_text"
+        app:layout_constraintTop_toTopOf="@+id/kullanıcı_adı_text"
+        android:layout_marginRight="8dp" />
 
-</RelativeLayout>
+    <CheckBox
+        android:id="@+id/login_pass_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="#E8922C"
+        app:layout_constraintBottom_toBottomOf="@+id/sifre_text"
+        app:layout_constraintEnd_toEndOf="@+id/sifre_text"
+        app:layout_constraintTop_toTopOf="@+id/sifre_text"
+        android:layout_marginRight="8dp" />
+
+    <CheckBox
+        android:id="@+id/login_rememberme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Beni Hatırla"
+        android:buttonTint="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sifre_text" />
+
+    <TextView
+        android:id="@+id/login_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="monospace"
+        android:text="@string/login_txt"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTransparentWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_register_txt"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/login_register_txt"
+        android:textAlignment="center"
+        android:onClick="kayıt"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/login_askforregister_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/login_askforregister"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/login_register_txt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/login_forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_forgotpass_txt"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/girisBttn" />
+
+</android.support.constraint.ConstraintLayout>

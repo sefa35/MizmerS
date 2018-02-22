@@ -132,4 +132,11 @@ DTM9: Duyumsal-Hareketsel Konfor Arayan Mizaç Tipi</string>
         translatable="false">Hello blank fragment</string>
     <string name="start_test"
         translatable="false">Arkadaş ekle ve mizacını belirle</string>
+    <string name="login_txt">Giriş Yap</string>
+    <string name="login_register_txt">Kayıt Ol</string>
+    <string name="login_askforregister">Hala bir hesabın yok mu?</string>
+    <string name="login_forgotpass_txt">Şifremi Unuttum</string>
+    <string name="register_txt">Kayıt Ol</string>
+    <string name="register_btn_txt">Kaydol</string>
+    <string name="register_help_txt">Yardım</string>
 </resources>

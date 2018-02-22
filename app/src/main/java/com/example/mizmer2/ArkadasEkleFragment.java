@@ -39,34 +39,34 @@ public class ArkadasEkleFragment extends Fragment implements View.OnClickListene
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) {final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
+        mBuilder.setIcon(R.drawable.logo);
+        mBuilder.setTitle(R.string.popup_title);
+        mBuilder.setMessage(R.string.popup_message);
+        mBuilder.setCancelable(false);
+        mBuilder.setPositiveButton("Teste geç", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //myListener.goToFragment();
+                Dtmm2Fragment dtmm2Fragment = new Dtmm2Fragment();
+                getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm2Fragment, dtmm2Fragment.getTag()).commit();
+
+
+            }
+        });
+        mBuilder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog alertDialog = mBuilder.create();
+        alertDialog.show();
         switch (v.getId()){
             case R.id.in_sign_in:
 
-                final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
-                mBuilder.setIcon(R.drawable.logo);
-                mBuilder.setTitle(R.string.popup_title);
-                mBuilder.setMessage(R.string.popup_message);
-                mBuilder.setCancelable(false);
-                mBuilder.setPositiveButton("Teste geç", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //myListener.goToFragment();
-                        Dtmm2Fragment dtmm2Fragment = new Dtmm2Fragment();
-                        getFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmm2Fragment, dtmm2Fragment.getTag()).commit();
 
-
-                    }
-                });
-                mBuilder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
-
-                AlertDialog alertDialog = mBuilder.create();
-                alertDialog.show();
 
 
         }

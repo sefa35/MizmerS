@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.app.*;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,7 +23,8 @@ public class  MainActivity extends AppCompatActivity {
 
     DataBaseHelper helper = new DataBaseHelper(this);
 
-    Button kayıtButton, girisButton;
+    Button  girisButton;
+    TextView kayıtOl;
     EditText kullanıcı_adı, sifre;
     private String username, pass;
     private ProgressDialog progressDialog;
@@ -42,7 +44,7 @@ public class  MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), SlideActivity.class));
         }
 
-        kayıtButton = (Button) findViewById(R.id.kayıtBttn);
+        kayıtOl= (TextView) findViewById(R.id.login_register_txt);
         girisButton = (Button) findViewById(R.id.girisBttn);
         kullanıcı_adı = (EditText)findViewById(R.id.kullanıcı_adı_text);
         sifre = (EditText)findViewById(R.id.sifre_text);
@@ -50,6 +52,8 @@ public class  MainActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
     }
+
+
 
     public void girisClicked(View w){
 
