@@ -139,4 +139,6 @@ DTM9: Duyumsal-Hareketsel Konfor Arayan Mizaç Tipi</string>
     <string name="register_txt">Kayıt Ol</string>
     <string name="register_btn_txt">Kaydol</string>
     <string name="register_help_txt">Yardım</string>
+    <string name="ad_soyad">Ad Soyad</string>
+    <string name="mizac_tipi">Mizaç Tipi</string>
 </resources>

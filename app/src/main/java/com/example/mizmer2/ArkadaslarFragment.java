@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 
@@ -17,7 +18,8 @@ import android.widget.TextView;
 public class ArkadaslarFragment extends Fragment {
 
     Button düzenle, retest, rapor;
-    TextView text_who, text_name, text_type;
+   // TextView text_who, text_name, text_type;
+
 
     public ArkadaslarFragment() {
         // Required empty public constructor
@@ -33,11 +35,11 @@ public class ArkadaslarFragment extends Fragment {
 
         düzenle=v.findViewById(R.id.button_düzenle);
         retest=v.findViewById(R.id.button_retest);
-        rapor=v.findViewById(R.id.button_rapor);
+       // rapor=v.findViewById(R.id.button_rapor);
 
-        text_who = v.findViewById(R.id.textViewWho);
-        text_name= v.findViewById(R.id.textViewName);
-        rapor = v.findViewById(R.id.button_rapor);
+//        text_who = v.findViewById(R.id.textViewWho);
+//        text_name= v.findViewById(R.id.textViewName);
+//        rapor = v.findViewById(R.id.button_rapor);
 
         düzenle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,14 +55,9 @@ public class ArkadaslarFragment extends Fragment {
 
             }
         });
-        rapor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                startActivity(new Intent(getActivity().getApplication(), AyrintiliBilgi.class));
 
-            }
-        });
+
 
         return v;
     }

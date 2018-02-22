@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.app.*;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,7 +27,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class
 HomeFragment extends Fragment{
 
-    private Button goToTest, firstFriend, addFriend, cıkıs;
+    private Button goToTest, addFriend, cıkıs;
+    ImageView firstFriend;
     private static int counter = 0;
     private FirebaseAuth firebaseAuth;
 
@@ -48,9 +50,9 @@ HomeFragment extends Fragment{
         }
 
         goToTest = (Button)v.findViewById(R.id.button_test_coz);
-        firstFriend = (Button)v.findViewById(R.id.button_arkadaş1);
+        firstFriend = (ImageView) v.findViewById(R.id.button_arkadaş1);
         addFriend = (Button)v.findViewById(R.id.button_arkadas_ekle);
-        cıkıs = v.findViewById(R.id.button_cıkıs);
+        cıkıs = (Button) v.findViewById(R.id.button_cıkıs);
 
         cıkıs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +96,11 @@ HomeFragment extends Fragment{
 
         return v;
     }
+
+//    public void firstFriendClicked(View view){
+//        ArkadaslarFragment arkadaslarFragment = new ArkadaslarFragment();
+//        getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadaslarFragment, arkadaslarFragment.getTag()).commit();
+//    }
 
 
 }

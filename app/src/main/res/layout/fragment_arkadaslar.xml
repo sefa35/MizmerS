@@ -7,78 +7,82 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textViewWho"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="1. Arkadaşım"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewName"
-        app:layout_constraintStart_toStartOf="@+id/textViewName" />
 
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginStart="27dp"
-        android:text="İsim Soyisim"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewType"
-        app:layout_constraintEnd_toStartOf="@+id/button_retest"
-        app:layout_constraintStart_toStartOf="parent" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/friends_profile_image"
+        android:layout_width="107dp"
+        android:layout_height="102dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/image_test_kisi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewType"
+    <ImageView
+        android:id="@+id/friends_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:text="Mizaç : DTM 2-3"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_retest"
-        app:layout_constraintEnd_toStartOf="@+id/button_retest" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/adsoyad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/friends_profile_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/friends_mizac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/mizac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/friends_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/friends_name" />
 
     <Button
         android:id="@+id/button_düzenle"
-        android:background="@drawable/rounded_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="29dp"
-        android:layout_marginTop="38dp"
-        android:text="Düzenle"
+        android:layout_width="65dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/duzenlebtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/friends_mizac"
+        app:layout_constraintTop_toBottomOf="@+id/friends_mizac"
+        android:layout_marginRight="8dp" />
 
     <Button
         android:id="@+id/button_retest"
-        android:background="@drawable/rounded_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="83dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/testagain"
         android:paddingBottom="15dp"
-        android:text="Testi Tekrar Yapmak İstiyorum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewName"
-        app:layout_constraintTop_toBottomOf="@+id/button_düzenle" />
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toEndOf="@+id/button_düzenle"
+        app:layout_constraintTop_toBottomOf="@+id/friends_mizac"
+        android:layout_marginRight="8dp" />
 
-    <Button
-        android:id="@+id/button_rapor"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/rounded_button2"
-        android:text="Arkadaşının mizaç raporu için tıklayınız.."
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
-        android:textStyle="italic"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/frienddesc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_retest" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
