@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mizmer2">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-sdk tools:overrideLibrary="com.craftman.cardform" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -36,18 +40,28 @@
             android:name=".NavigationDrawerMenu"
             android:label="@string/title_activity_navigation_drawer_menu" />
         <activity android:name=".ExamActivity" />
-        <activity android:name=".AyrintiliBilgi"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".AyrintiliBilgi"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name=".MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
+        <activity
+            android:name=".PaymentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PaymentsActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        
 
     </application>
 

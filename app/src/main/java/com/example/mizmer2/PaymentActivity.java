@@ -1,26 +1,18 @@
 package com.example.mizmer2;
 
-
-import android.content.Context;
-import android.content.DialogInterface;
+import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.app.*;
-import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.craftman.cardform.Card;
+import com.craftman.cardform.CardForm;
+import com.craftman.cardform.OnPayBtnClickListner;
+import com.craftman.cardform.Token;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.identity.intents.model.UserAddress;
@@ -37,125 +29,52 @@ import com.google.android.gms.wallet.PaymentsClient;
 import com.google.android.gms.wallet.TransactionInfo;
 import com.google.android.gms.wallet.Wallet;
 import com.google.android.gms.wallet.WalletConstants;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Arrays;
 
-
-public class
-HomeFragment extends Fragment{
-
-    private Button goToTest, addFriend, cıkıs;
-    ImageView firstFriend;
-    private static int counter = 0;
-    private FirebaseAuth firebaseAuth;
+public class PaymentActivity extends AppCompatActivity {
 
     PaymentsClient paymentsClient;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_payment);
 
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment n
-
-        paymentsClient =
-                Wallet.getPaymentsClient(getActivity().getApplication(),
+          paymentsClient =
+                Wallet.getPaymentsClient(PaymentActivity.this,
                         new Wallet.WalletOptions.Builder().setEnvironment(WalletConstants.ENVIRONMENT_TEST)
                                 .build());
 
 
-        View v = inflater.inflate(R.layout.fragment_home, container, false);
+        CardForm cardForm = (CardForm)findViewById(R.id.cardform);
+        TextView txtDes = findViewById(R.id.payment_amount);
+        Button btnPay = findViewById(R.id.btn_pay);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        txtDes.setText("$1000");
+        btnPay.setText(String.format("Payer %s", txtDes.getText()));
 
-        if (firebaseAuth.getCurrentUser() == null){
-            startActivity(new Intent(getActivity().getApplication(), MainActivity.class ));
-
-        }
-
-        goToTest = (Button)v.findViewById(R.id.button_test_coz);
-        firstFriend = (ImageView) v.findViewById(R.id.button_arkadaş1);
-        addFriend = (Button)v.findViewById(R.id.button_arkadas_ekle);
-        cıkıs = (Button) v.findViewById(R.id.button_cıkıs);
-
-        cıkıs.setOnClickListener(new View.OnClickListener() {
+        cardForm.setPayBtnClickListner(new OnPayBtnClickListner() {
             @Override
-            public void onClick(View v) {
+            public void onClick(Card card) {
+                //Toast.makeText(PaymentActivity.this, "Name: "+ card.getName()+ " | Last 4 digits : "+card.getLast4(), Toast.LENGTH_SHORT).show();
 
-                firebaseAuth.signOut();
-                startActivity(new Intent(getActivity().getApplication(), MainActivity.class));
+
+                    PaymentDataRequest request = createPaymentDataRequest();
+                    if (request != null) {
+                        AutoResolveHelper.resolveTask(
+                                paymentsClient.loadPaymentData(request),
+                                PaymentActivity.this,
+                                3228);
+                        // LOAD_PAYMENT_DATA_REQUEST_CODE is a constant integer of your choice,
+                        // similar to what you would use in startActivityForResult
+                    }
+
 
             }
         });
 
-        goToTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity().getApplication(), ExamActivity.class ));
-
-            }
-        });
-        firstFriend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                ArkadaslarFragment arkadaslarFragment = new ArkadaslarFragment();
-                getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadaslarFragment, arkadaslarFragment.getTag()).commit();
-
-            }
-        });
-        addFriend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (counter != 2) {
-                    ArkadasEkleFragment arkadasEkleFragment = new ArkadasEkleFragment();
-                    getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadasEkleFragment, arkadasEkleFragment.getTag()).commit();
-                    counter++;
-                }else {
-                    final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
-                    mBuilder.setIcon(R.drawable.logo);
-                    mBuilder.setTitle("Premium Yükseltme");
-                    mBuilder.setMessage("Daha fazla arkadaş ekleme hakkı kazanmak için devam et");
-                    mBuilder.setCancelable(false);
-                    mBuilder.setPositiveButton("Devam", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            //startActivity(new Intent(getActivity(), PaymentActivity.class));
-                            PaymentDataRequest request = createPaymentDataRequest();
-                            if (request != null) {
-                                AutoResolveHelper.resolveTask(
-                                        paymentsClient.loadPaymentData(request),
-                                        getActivity(),
-                                        3228);
-                                // LOAD_PAYMENT_DATA_REQUEST_CODE is a constant integer of your choice,
-                                // similar to what you would use in startActivityForResult
-                            }
-                        }
-                    });
-                    mBuilder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    });
-
-                    AlertDialog alertDialog = mBuilder.create();
-                    alertDialog.show();
-                }
-            }
-        });
-
-
-        return v;
     }
-
-//    public void firstFriendClicked(View view){
-//        ArkadaslarFragment arkadaslarFragment = new ArkadaslarFragment();
-//        getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadaslarFragment, arkadaslarFragment.getTag()).commit();
-//    }
 
     private void isReadyToPay() {
         IsReadyToPayRequest request = IsReadyToPayRequest.newBuilder()
@@ -252,5 +171,6 @@ HomeFragment extends Fragment{
                 // Do nothing.
         }
     }
+
 
 }

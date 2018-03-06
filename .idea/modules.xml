@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Mizmer5.iml" filepath="$PROJECT_DIR$/Mizmer5.iml" />
+      <module fileurl="file://C:\Android Applications\MizmerS\Mizmer5.iml" filepath="C:\Android Applications\MizmerS\Mizmer5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MizmerS.iml" filepath="$PROJECT_DIR$/MizmerS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

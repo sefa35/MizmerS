@@ -32,7 +32,7 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
 
         bttn =(Button)findViewById(R.id.button);
 
-        ımageView=(ImageView)findViewById(R.id.examImage);
+        //ımageView=(ImageView)findViewById(R.id.examImage);
 
         textTest = (TextView)findViewById(R.id.textViewExam);
 
@@ -44,7 +44,7 @@ public class ExamActivity extends AppCompatActivity implements MyListener {
     public void onClicked(View view){
 
         bttn.setVisibility(View.INVISIBLE);
-        ımageView.setVisibility(View.INVISIBLE);
+        //ımageView.setVisibility(View.INVISIBLE);
 
         Dtmm1Fragment dtmm1Fragment = new Dtmm1Fragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.contentExamLayout, dtmm1Fragment, dtmm1Fragment.getTag()).commit();

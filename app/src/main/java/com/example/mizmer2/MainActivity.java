@@ -50,6 +50,8 @@ public class  MainActivity extends AppCompatActivity {
         sifre = (EditText)findViewById(R.id.sifre_text);
 
 
+
+
         progressDialog = new ProgressDialog(this);
     }
 

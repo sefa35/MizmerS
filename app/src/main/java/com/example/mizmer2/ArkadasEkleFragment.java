@@ -9,8 +9,13 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +23,9 @@ import android.widget.TextView;
 public class ArkadasEkleFragment extends Fragment implements View.OnClickListener {
 
     private Button signIn;
+    Spinner spinGender, spinAge;
+    String[] gender = {"Cinsiyet Seçiniz.." , "Erkek", "Kadın" };//array of strings used to populate the spinner
+
 
     public ArkadasEkleFragment() {
         // Required empty public constructor
@@ -32,14 +40,28 @@ public class ArkadasEkleFragment extends Fragment implements View.OnClickListene
 
 
         signIn = (Button)v.findViewById(R.id.in_sign_in);
-
         signIn.setOnClickListener(this);
+
+        spinGender = (Spinner)v.findViewById(R.id.spinnerGender);
+        spinAge = v.findViewById(R.id.spinnerAge);
+
+        List<Integer> spinnerArray = new ArrayList<>();
+        for (int i = 4; i < 100; i++){
+            spinnerArray.add(i);
+        }
+
+        ArrayAdapter<String> adapterGender = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, gender);
+        ArrayAdapter<Integer> adapterAge = new ArrayAdapter<Integer>(getActivity(), android.R.layout.simple_spinner_item, spinnerArray);
+        spinGender.setAdapter(adapterGender);
+        spinAge.setAdapter(adapterAge);
+
 
         return v;
     }
 
     @Override
-    public void onClick(View v) {final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
+    public void onClick(View v) {
+        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
         mBuilder.setIcon(R.drawable.logo);
         mBuilder.setTitle(R.string.popup_title);
         mBuilder.setMessage(R.string.popup_message);
