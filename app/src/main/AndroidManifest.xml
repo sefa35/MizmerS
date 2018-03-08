@@ -44,6 +44,7 @@
             android:name=".AyrintiliBilgi"
             android:theme="@style/AppTheme.NoActionBar" />
 
+
         <service
             android:name=".MyFirebaseMessagingService"
             android:enabled="true"

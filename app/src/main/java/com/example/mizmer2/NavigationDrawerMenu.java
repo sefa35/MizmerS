@@ -1,18 +1,12 @@
 package com.example.mizmer2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.app.*;
-import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -63,13 +57,20 @@ public class NavigationDrawerMenu extends AppCompatActivity implements MyListene
                     DtmmFragment dtmmFragment = new DtmmFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, dtmmFragment, dtmmFragment.getTag()).commit();
 
+
                     return true;
 //                case R.id.navigation_profile:
 //                    //mTextMessage.setText(R.string.title_profile);
 //
 //                    return true;
-                case R.id.navigation_suggestions:
+                case R.id.navigation_suggestions:   // Arkadaş
                     //mTextMessage.setText(R.string.title_suggestions);
+//                    LineupFragment lineupFragment = new LineupFragment();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.contentLayout, lineupFragment, lineupFragment.getTag()).commit();
+
+                    SavedTabsFragment savedTabsFragment = new SavedTabsFragment();
+                getFragmentManager().beginTransaction().replace(R.id.contentLayout, savedTabsFragment, savedTabsFragment.getTag()).commit();
+
                     return true;
                 case R.id.navigation_aboutUs:
                     //mTextMessage.setText(R.string.title_aboutUs);
