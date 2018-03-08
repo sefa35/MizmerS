@@ -14,51 +14,50 @@
         android:layout_width="107dp"
         android:layout_height="102dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/image_test_kisi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="8dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/friends_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/adsoyad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/friends_profile_image"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="8dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/friends_mizac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:src="@drawable/mizac"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/friends_profile_image"
-        app:layout_constraintTop_toBottomOf="@+id/friends_name"
-        android:layout_marginRight="8dp" />
+        app:layout_constraintTop_toBottomOf="@+id/friends_name" />
 
     <Button
         android:id="@+id/button_test_coz"
-        android:layout_width="70dp"
+        android:layout_width="51dp"
         android:layout_height="28dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="-1dp"
         android:background="#E8922C"
-        android:text="Önce Kendini Tanı"
+        android:text="Testi Çöz"
         android:textAllCaps="false"
-        android:textColor="@color/colorPrimary"
         android:textSize="10sp"
-        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/friends_mizac"
@@ -70,108 +69,46 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="136dp"
         android:src="@drawable/arkadaslar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/home_search"
-        android:layout_width="173dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:background="#3a5fcd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_friends_title" />
-
-    <ImageView
-        android:id="@+id/button_arkadaş1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/arkadas1"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_search" />
-
-    <ImageView
-        android:id="@+id/Home_arkadas2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/arkadas2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_arkadaş1" />
-
-    <ImageView
-        android:id="@+id/home_arkadas3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/arkadas3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Home_arkadas2" />
-
-    <Button
-        android:id="@+id/button_arkadas_ekle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/arkadasekle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_arkadas3" />
-
     <Button
         android:id="@+id/button_cıkıs"
         android:layout_width="84dp"
         android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:text="Çıkış"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/home_name_txt"
         android:layout_width="102dp"
         android:layout_height="23dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
+        android:gravity="start"
         android:text="@string/ad_soyad"
         android:textAlignment="textStart"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/friends_name"
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="@+id/friends_name"
-        app:layout_constraintTop_toTopOf="@+id/friends_name"
-        android:layout_marginLeft="8dp"
-        android:gravity="start" />
+        app:layout_constraintTop_toTopOf="@+id/friends_name" />
 
     <TextView
         android:id="@+id/home_mizac_txt"
         android:layout_width="102dp"
         android:layout_height="23dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:text="@string/mizac_tipi"
@@ -179,7 +116,37 @@
         app:layout_constraintEnd_toEndOf="@+id/friends_mizac"
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="@+id/friends_mizac"
-        app:layout_constraintTop_toTopOf="@+id/friends_mizac"
-        android:layout_marginLeft="8dp" />
+        app:layout_constraintTop_toTopOf="@+id/friends_mizac" />
+
+    <Button
+        android:id="@+id/button_arkadas_ekle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/arkadasekle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_friends_title"
+        app:layout_constraintVertical_bias="0.972" />
+
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_width="368dp"
+        android:layout_height="286dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_arkadas_ekle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_friends_title">
+
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

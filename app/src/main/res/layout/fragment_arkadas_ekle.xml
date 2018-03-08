@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/circleImageView2" />
 
     <EditText
-        android:id="@+id/in_email"
+        android:id="@+id/arkadasekle_name"
         android:layout_width="145dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -58,7 +58,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        android:layout_marginLeft="8dp" />
 
     <Spinner
         android:id="@+id/spinnerGender"
@@ -72,7 +73,9 @@
         app:layout_constraintBottom_toTopOf="@+id/in_sign_in"
         app:layout_constraintEnd_toStartOf="@+id/spinnerAge"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="80dp" />
 
     <Spinner
         android:id="@+id/spinnerAge"
@@ -84,7 +87,8 @@
         app:layout_constraintBottom_toTopOf="@+id/in_sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spinnerGender"
-        app:layout_constraintTop_toBottomOf="@+id/in_email" />
+        app:layout_constraintTop_toBottomOf="@+id/arkadasekle_name"
+        android:layout_marginRight="80dp" />
 
 
 </android.support.constraint.ConstraintLayout>

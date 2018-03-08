@@ -1,6 +1,7 @@
 package com.example.mizmer2;
 
 
+import android.app.ListFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -61,6 +62,15 @@ HomeFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment n
 
+       com.example.mizmer2.ListFragment fragment = new com.example.mizmer2.ListFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.place_holder,fragment);
+        fragmentTransaction.commit();
+
+
+
+
         paymentsClient =
                 Wallet.getPaymentsClient(getActivity().getApplication(),
                         new Wallet.WalletOptions.Builder().setEnvironment(WalletConstants.ENVIRONMENT_TEST)
@@ -77,7 +87,7 @@ HomeFragment extends Fragment{
         }
 
         goToTest = (Button)v.findViewById(R.id.button_test_coz);
-        firstFriend = (ImageView) v.findViewById(R.id.button_arkadaş1);
+       // firstFriend = (ImageView) v.findViewById(R.id.button_arkadaş1);
         addFriend = (Button)v.findViewById(R.id.button_arkadas_ekle);
         cıkıs = (Button) v.findViewById(R.id.button_cıkıs);
 
@@ -98,18 +108,12 @@ HomeFragment extends Fragment{
 
             }
         });
-        firstFriend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                ArkadaslarFragment arkadaslarFragment = new ArkadaslarFragment();
-                getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadaslarFragment, arkadaslarFragment.getTag()).commit();
 
-            }
-        });
         addFriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (counter != 2) {
                     ArkadasEkleFragment arkadasEkleFragment = new ArkadasEkleFragment();
                     getFragmentManager().beginTransaction().replace(R.id.contentLayout, arkadasEkleFragment, arkadasEkleFragment.getTag()).commit();

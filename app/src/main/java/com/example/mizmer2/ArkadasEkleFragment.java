@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -23,8 +24,11 @@ import java.util.List;
 public class ArkadasEkleFragment extends Fragment implements View.OnClickListener {
 
     private Button signIn;
+    EditText arkadasName;
     Spinner spinGender, spinAge;
     String[] gender = {"Cinsiyet Seçiniz.." , "Erkek", "Kadın" };//array of strings used to populate the spinner
+
+    OurData data = new OurData();
 
 
     public ArkadasEkleFragment() {
@@ -39,6 +43,7 @@ public class ArkadasEkleFragment extends Fragment implements View.OnClickListene
         View v = inflater.inflate(R.layout.fragment_arkadas_ekle, container, false);
 
 
+        arkadasName = (EditText) v.findViewById(R.id.arkadasekle_name);
         signIn = (Button)v.findViewById(R.id.in_sign_in);
         signIn.setOnClickListener(this);
 
@@ -61,6 +66,9 @@ public class ArkadasEkleFragment extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+
+        data.addTitle(arkadasName.getText().toString());
+
         final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getActivity());
         mBuilder.setIcon(R.drawable.logo);
         mBuilder.setTitle(R.string.popup_title);
